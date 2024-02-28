@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generator Undangan</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      h3 {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+      }
+
+      form {
+        width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        font-weight: bold;
+        font-size: small;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="submit"] {
+        width: calc(100% - 10px);
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Tools Kanggo Gawe Undangan</h3>
+    <form action="print.html">
+      <br />
+      <label for="nama">Kepada Yth:</label>
+      <br>
+      <input type="text" id="nama" name="nama" value="Siapa Nama Hadirin">
+      <br>
+      <br>
+      <label for="nama">Alamat:</label>
+      <br>
+      <input type="text" id="alamat" name="alamat" value="RT.">
+      <br>
+      <br />
+      <label for="nama">Pelaksanaan:</label>
+      <br>
+      <label for="nama">Tgl:</label>
+      <br>
+      <input type="date" id="tglh" name="tglh">
+      <br>
+      <br>
+      <label for="nama">Waktu:</label>
+      <br>
+      <input type="text" id="waktu" name="waktu" style="width: 200px;" value="20.00 WIB - Selesai">
+      <br>
+      <br>
+      <label for="nama">Tempat:</label>
+      <br>
+      <input type="text" id="tempat" name="tempat" value="Masjid Muhtadien">
+      <br>
+      <br>
+      <label for="nama">Agenda:</label>
+      <br>
+      <input type="text" id="agenda" name="agenda" value="Persiapan Ramadhan 1445 H">
+      <br>
+      <br>
+      <br>
+      <label for="nama">Tgl Surat:</label>
+      <br>
+      <input type="date" id="tgl" name="tgl">
+      <br>
+      <br>
+      <label for="nama">Ketua</label>
+      <br>
+      <input type="text" id="ketua" name="ketua" value="H. Budi Mulyo">
+      <br />
+      <br />
+      <input type="submit" value="Print">
+    </form>
+    <script>
+      document.getElementById('tgl').valueAsDate = new Date();
+      document.getElementById('tglh').valueAsDate = new Date();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Link</title>
+</head>
+<body>
+    <input type="text" id="urlInput" placeholder="Masukkan URL">
+    <button onclick="createLink()">Tambah Link</button>
+    <ul id="linkList"></ul>
+
+    <script>
+        function createLink() {
+            const url = document.getElementById('urlInput').value;
+            const linkList = document.getElementById('linkList');
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = url;
+            link.target = '_blank';
+            link.textContent = url;
+            listItem.appendChild(link);
+            linkList.appendChild(listItem);
+            document.getElementById('urlInput').value = '';
+        }
+    </script>
+</body>
+</html>
